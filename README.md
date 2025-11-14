@@ -12,19 +12,16 @@ npx create-expo-app -t github:TardigradeX-1111/rn-starter-template MyNewAppName
 
 ```bash
 
-git clone https://github.com/TardigradeX-1111/rn-starter-template.git netflix_clone
-cd netflix_clone
-if [ -f rename-starter.sh ]; then
-  chmod +x rename-starter.sh
-  ./rename-starter.sh netflix_clone
-else
-  OLD="mobile_movie_app"
-  NEW="netflix_clone"
-  grep -RIl --exclude-dir=node_modules "$OLD" . | xargs -I{} sed -i '' "s/$OLD/$NEW/g" {} || true
+git clone https://github.com/TardigradeX-1111/rn-starter-template.git APPNAME
+cd APPNAME
 
-  # Update package.json and app.json safely
-  node -e "const fs=require('fs'); const p='package.json'; if(fs.existsSync(p)){const j=JSON.parse(fs.readFileSync(p,'utf8')); j.name='$NEW'; if(j.displayName) j.displayName='$NEW'; fs.writeFileSync(p, JSON.stringify(j,null,2)); console.log('package.json updated'); } const a='app.json'; if(fs.existsSync(a)){const ap=JSON.parse(fs.readFileSync(a,'utf8')); if(ap.expo){ap.expo.name='$NEW'; ap.expo.slug='$NEW'} fs.writeFileSync(a, JSON.stringify(ap,null,2)); console.log('app.json updated'); }"
-fi
+OLD="mobile_movie_app"
+NEW="APPNAME"
+
+grep -RIl --exclude-dir=node_modules "$OLD" . | xargs -I{} sed -i '' "s/$OLD/$NEW/g" {} || true
+
+# Update package.json and app.json safely
+node -e "const fs=require('fs'); const p='package.json'; if(fs.existsSync(p)){const j=JSON.parse(fs.readFileSync(p,'utf8')); j.name='$NEW'; if(j.displayName) j.displayName='$NEW'; fs.writeFileSync(p, JSON.stringify(j,null,2)); console.log('package.json updated'); } const a='app.json'; if(fs.existsSync(a)){const ap=JSON.parse(fs.readFileSync(a,'utf8')); if(ap.expo){ap.expo.name='$NEW'; ap.expo.slug='$NEW'} fs.writeFileSync(a, JSON.stringify(ap,null,2)); console.log('app.json updated'); }"
 
 # 3. Install dependencies and start
 npm install
