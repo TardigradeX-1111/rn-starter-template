@@ -1,14 +1,16 @@
 # Welcome to your Expo app 👋
 
-## Create a new app :
+## M-1 : Create a new app :
 
 ```bash
 npx create-expo-app -t github:TardigradeX-1111/rn-starter-template MyNewAppName
 ```
 
-## OR clone and RENAME (APPNAME --> Your app name) (Copy this code and paste in terminal after changing app name) :
+## M-2 : Clone and Rename (APPNAME --> Your app name) 
 
-**It will create a Project folder -> cd into it and then create the files there**
+1. More reliable
+2. Copy this code and paste in terminal ***after changing app name*** --> Line 1,2 and 4
+3. It will create a Project folder -> cd into it and then create the files there
 
 ```bash
 
