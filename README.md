@@ -6,7 +6,7 @@
 npx create-expo-app -t github:TardigradeX-1111/rn-starter-template MyNewAppName
 ```
 
-## OR clone and rename (Copy this code and paste in terminal) :
+## OR clone and RENAME (APPNAME --> Your app name) (Copy this code and paste in terminal after changing app name) :
 
 **It will create a Project folder -> cd into it and then create the files there**
 
