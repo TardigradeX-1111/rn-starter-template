@@ -1,5 +1,23 @@
 # Welcome to your Expo app 👋
 
+**Create a new app :**
+
+```bash
+npx create-expo-app -t github:TardigradeX-1111/rn-starter-template MyNewAppName
+```
+
+**OR clone and rename :**
+
+```bash
+git clone https://github.com/TardigradeX-1111/rn-starter-template MyNewAppName
+cd MyNewAppName
+chmod +x rename-starter.sh
+./rename-starter.sh MyNewAppName
+npm install
+npx expo start
+```
+---
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
